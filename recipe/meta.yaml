@@ -10,7 +10,7 @@ source:
   sha256: 7e34fab818ef64f7295edde8617b88de99994fe5b5a78cfa105fa9a086e9266b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -40,7 +40,7 @@ test:
     - pip check
 
 about:
-  home: https://github.com/opendatacube/odc-tools/tree/develop/libs/stac
+  home: https://github.com/opendatacube/odc-stac/
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
@@ -62,7 +62,7 @@ about:
     ```
 
   doc_url: https://odc-stac.readthedocs.io/
-  dev_url: https://github.com/opendatacube/odc-tools/tree/develop/libs/stac
+  dev_url: https://github.com/opendatacube/odc-stac/
 
 extra:
   recipe-maintainers:
