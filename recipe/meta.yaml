@@ -1,5 +1,5 @@
 {% set name = "odc-stac" %}
-{% set version = "0.2.0a8" %}
+{% set version = "0.2.0a9" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,10 +7,10 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 7e34fab818ef64f7295edde8617b88de99994fe5b5a78cfa105fa9a086e9266b
+  sha256: d921272aea6a8c37e0a15b461a3af9e6681225a9c8c564f9a989f5afa47e3d9b
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -24,7 +24,6 @@ requirements:
     - datacube >=1.8.5 # need hashable GeoBox
     - jinja2
     - numpy
-    - odc-io
     - pandas
     - pystac >=1.0.0,<2
     - toolz
