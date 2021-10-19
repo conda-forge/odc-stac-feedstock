@@ -1,7 +1,7 @@
 About odc-stac
 ==============
 
-Home: https://github.com/opendatacube/odc-tools/tree/develop/libs/stac
+Home: https://github.com/opendatacube/odc-stac/
 
 Package license: Apache-2.0
 
@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/odc-stac-feedst
 
 Summary: Tooling for converting STAC metadata to ODC data model
 
-Development: https://github.com/opendatacube/odc-tools/tree/develop/libs/stac
+Development: https://github.com/opendatacube/odc-stac/
 
 Documentation: https://odc-stac.readthedocs.io/
 
