@@ -47,19 +47,6 @@ about:
   description: |
     Load STAC `pystac.Items` into `xarray.Dataset`.
 
-    ```python
-
-       catalog = pystac.Client.open(...)
-       query = catalog.search(...)
-       xx = odc.stac.load(
-           query.get_items(),
-           bands=["red", "green", "blue"],
-           output_crs="EPSG:32606",
-           resolution=(100, -100),
-       )
-       xx.red.plot.imshow(col="time")
-    ```
-
   doc_url: https://odc-stac.readthedocs.io/
   dev_url: https://github.com/opendatacube/odc-stac/
 
