@@ -1,5 +1,5 @@
 {% set name = "odc-stac" %}
-{% set version = "0.2.4" %}
+{% set version = "0.3.0a0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 09b0a4be6f0807dee37efe90028197ee087082e4496f66a9a71456d8473a62af
+  sha256: 60ba232648893f2571026a16c2c8e3ed6fdadfd3ae3fa214c2a743e2b8b0ffd0
 
 build:
   number: 0
@@ -17,11 +17,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
-    - python >=3.6
+    - python >=3.8
     - affine
-    - datacube >=1.8.5 # need hashable GeoBox
+    - odc-geo >=0.1.3
+    - rasterio
+    - dask-core
     - jinja2
     - numpy
     - pandas
