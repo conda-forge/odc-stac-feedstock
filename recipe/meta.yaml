@@ -1,5 +1,5 @@
 {% set name = "odc-stac" %}
-{% set version = "0.3.0rc0" %}
+{% set version = "0.3.0rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: adbafdea1460ecbefe5bd3164ba862b2c5266a30eed277c946f57e19ab170a6e 
+  sha256: 63b73dea86d8110c85cad1f90f256131fbf94e33ab9539a299b960fba004298b
 
 build:
   number: 0
