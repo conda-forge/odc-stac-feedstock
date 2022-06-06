@@ -5,7 +5,7 @@ Home: https://github.com/opendatacube/odc-stac/
 
 Package license: Apache-2.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/odc-stac-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/odc-stac-feedstock/blob/main/LICENSE.txt)
 
 Summary: Tooling for converting STAC metadata to ODC data model
 
@@ -15,19 +15,6 @@ Documentation: https://odc-stac.readthedocs.io/
 
 Load STAC `pystac.Items` into `xarray.Dataset`.
 
-```python
-
-   catalog = pystac.Client.open(...)
-   query = catalog.search(...)
-   xx = odc.stac.load(
-       query.get_items(),
-       bands=["red", "green", "blue"],
-       output_crs="EPSG:32606",
-       resolution=(100, -100),
-   )
-   xx.red.plot.imshow(col="time")
-```
-
 
 Current build status
 ====================
@@ -35,8 +22,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14136&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/odc-stac-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14136&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/odc-stac-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -59,16 +46,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `odc-stac` can be installed with:
+Once the `conda-forge` channel has been enabled, `odc-stac` can be installed with `conda`:
 
 ```
 conda install odc-stac
 ```
 
-It is possible to list all of the versions of `odc-stac` available on your platform with:
+or with `mamba`:
+
+```
+mamba install odc-stac
+```
+
+It is possible to list all of the versions of `odc-stac` available on your platform with `conda`:
 
 ```
 conda search odc-stac --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search odc-stac --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search odc-stac --channel conda-forge
+
+# List packages depending on `odc-stac`:
+mamba repoquery whoneeds odc-stac --channel conda-forge
+
+# List dependencies of `odc-stac`:
+mamba repoquery depends odc-stac --channel conda-forge
 ```
 
 
@@ -86,10 +98,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
