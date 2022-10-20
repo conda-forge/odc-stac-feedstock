@@ -1,5 +1,5 @@
 {% set name = "odc-stac" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9ac5cd4d4e3c28a69ce613f946b99fbf744dc05ab4ce872ebf52e71073c46ea9
+  sha256: 6f93c294c3aa4453dec5d4ea7f27c2edb7ec521d0d1da0c76cd529f424923242
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - odc-geo >=0.3.0
     - rasterio >=1.0.0,!=1.3.0,!=1.3.1
     - dask-core
-    - numpy
+    - numpy >=1.20.0
     - pandas
     - pystac >=1.0.0,<2
     - toolz
