@@ -1,5 +1,5 @@
 {% set name = "odc-stac" %}
-{% set version = "0.4.0rc3" %}
+{% set version = "0.4.0rc4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 6d9923b45bdae40646a320082ca86c5b7a24ca70021f39ac3945929dbe629212
+  sha256: 451f56b83a2fe478e0e57629d4165214a9c700aa050fefc3fccc0686a18b3725
 build:
   number: 0
   noarch: python
@@ -30,6 +30,7 @@ requirements:
     - pandas
     - pystac >=1.0.0,<2
     - toolz
+    - typing-extensions
     - xarray
 
 test:
