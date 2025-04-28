@@ -1,5 +1,5 @@
 {% set name = "odc-stac" %}
-{% set version = "0.4.0rc2" %}
+{% set version = "0.4.0rc3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 115387d8e0b4487b32b27d4dc940fe12dcbdc2b17bf4234eddeab8d96b95da3f 
+  sha256: 6d9923b45bdae40646a320082ca86c5b7a24ca70021f39ac3945929dbe629212
 build:
   number: 0
   noarch: python
@@ -16,9 +16,9 @@ build:
 
 requirements:
   host:
-    - pip
     - python {{ python_min }}
-    - hatch
+    - flit-core >=0.3.2,<4
+    - pip
   run:
     - python >={{ python_min }}
     - affine
