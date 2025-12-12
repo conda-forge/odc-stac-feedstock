@@ -1,5 +1,5 @@
 {% set name = "odc-stac" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,9 +8,9 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 7fcb110d8a02ca569b7b5647421f3687d803de292df0362d716accd513bea145
+  sha256: bee270811814a0e370881dc149b4d3709d2c46525316e192c6ecb1f452c6ad85
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - affine
     - odc-geo >=0.4.7
-    - odc-loader >=0.5.1,<0.6.0
+    - odc-loader >=0.6.0
     - rasterio >=1.0.0,!=1.3.0,!=1.3.1
     - dask-core
     - numpy >=1.20.0
