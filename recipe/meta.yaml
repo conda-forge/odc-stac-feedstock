@@ -1,5 +1,5 @@
 {% set name = "odc-stac" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: bee270811814a0e370881dc149b4d3709d2c46525316e192c6ecb1f452c6ad85
+  sha256: 2dd74f8767cf50a0b5366bfe5f5a561ad443ed67875b07420823a0457adf5327
 build:
   number: 0
   noarch: python
